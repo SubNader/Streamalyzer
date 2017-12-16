@@ -1,12 +1,15 @@
 def split(data, labels, test_size=0.5, random_state=95, shuffle=False):
     """
-    split the data using a certain ratio
+    splits the data using a certain ratio
     :param data: a list representing the data set
     :param test_size: the test set size (range 0.0:1.0)
-    :return: training set/labels and test set/labels.
+    :param random_state: RandomState instance
+    :param shuffle: whether the data should be shuffled or not
+    :return: training set, training labels, test set and test labels.
     """
     from sklearn.model_selection import train_test_split
     return train_test_split(data, labels, test_size=test_size, random_state=random_state, shuffle=shuffle)
+
 
 def tokenize(tweet, method):
     """
@@ -27,7 +30,7 @@ def tokenize(tweet, method):
 def get_stemmer(stemmer, language):
     """
         returns a stemmer
-        :param method: a string representing the type of stemmer
+        :param stemmer: a string representing the type of stemmer
         :return: return the stemmer object
     """
     if stemmer == 'snowball':
@@ -44,14 +47,12 @@ def clean(tweets, tokenizer='normal', stemmer='snowball', no_stopwords=True, no_
     :param tweets: a list of tweets
     :param tokenizer: string representing the tokenizer type
     :param stemmer: type of stemming
-    :param method: vectorizing type
-    :param stemming: use stem of the words in a tweet
     :param no_stopwords: removes low information words if True
     :param no_mentions: removes mentions if true
     :param remove_hashtags: replaces hashtags in the form of '#a_hashtag' to 'a hashtag' 
     :param unescape: unescapes html like characters 
-    :param verbose: prints the tweet after and before changes 
     :param remove_symbols: removes symbols
+    :param verbose: prints the tweet after and before changes 
     :return: returns cleaned tweets
     """
 
