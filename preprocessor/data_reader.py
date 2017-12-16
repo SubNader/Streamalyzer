@@ -40,8 +40,30 @@ def read_tweets(path):
             yield (tweet, level)
 
 
+def read_all_tweets(data_pool='train'):
+    """
+    reads all tweets from a dataset
+    :param data_pool: a string representing the data pool  
+    :return: returns a tuple of tweets and corresponding labels
+    """
+    emotions = ['anger', 'fear', 'joy', 'sadness']
+    tweets = []
+    labels = []
+    for i, emotion in enumerate(emotions):
+        path = get_path(emotion, data_pool)
+        emotion_tweets = [t[0] for t in read_tweets(path)]
+        tweets += emotion_tweets
+        labels += [i] * len(emotion_tweets)
+
+    return tweets, labels
+
+
 if __name__ == '__main__':
     from preprocessor.data_processor import *
-    path = get_path('joy')
-    twts = [x[0] for x in (read_tweets(path))]
-    cleaned_twts = clean(twts, tokenizer='twitter', stemmer='snowball', verbose=True)
+
+    # path = get_path('joy')
+    # twts = [x[0] for x in (read_tweets(path))]
+    # cleaned_twts = clean(twts, tokenizer='twitter', stemmer='snowball', verbose=True)
+
+    from pprint import pprint
+    pprint(read_all_tweets())
