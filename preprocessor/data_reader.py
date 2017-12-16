@@ -5,7 +5,7 @@ Module responsible for reading tweets from dataset
 
 def get_path(emotion, data_pool='train'):
     """
-    :param data_pool: 'train' or 'dev' 
+    :param data_pool: 'train' or 'dev'
     :param emotion: 'anger' or 'fear' or 'joy' or 'sadness'
     :return: file path for data
     """
@@ -32,14 +32,15 @@ def read_tweets(path):
 
             # check for end of input
             if len(splitted) == 4:
-                _, tweet, _, level = splitted
+                _, t, _, level = splitted
             else:
                 break
 
             level = level[0]
-            yield (tweet, level)
+            yield (t, level)
 
 
+# TODO(4): Remove this function
 def read_all_tweets(data_pool='train'):
     """
     reads all tweets from a dataset
@@ -51,19 +52,9 @@ def read_all_tweets(data_pool='train'):
     labels = []
     for i, emotion in enumerate(emotions):
         path = get_path(emotion, data_pool)
+        # noinspection PyTypeChecker
         emotion_tweets = [t[0] for t in read_tweets(path)]
         tweets += emotion_tweets
         labels += [i] * len(emotion_tweets)
 
     return tweets, labels
-
-
-if __name__ == '__main__':
-    from preprocessor.data_processor import *
-
-    # path = get_path('joy')
-    # twts = [x[0] for x in (read_tweets(path))]
-    # cleaned_twts = clean(twts, tokenizer='twitter', stemmer='snowball', verbose=True)
-
-    from pprint import pprint
-    pprint(read_all_tweets())
