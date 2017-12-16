@@ -1,3 +1,13 @@
+def split(data, labels, test_size=0.5, random_state=95, shuffle=False):
+    """
+    split the data using a certain ratio
+    :param data: a list representing the data set
+    :param test_size: the test set size (range 0.0:1.0)
+    :return: training set/labels and test set/labels.
+    """
+    from sklearn.model_selection import train_test_split
+    return train_test_split(data, labels, test_size=test_size, random_state=random_state, shuffle=shuffle)
+
 def tokenize(tweet, method):
     """
     tokenizes a tweet based on certain rules
