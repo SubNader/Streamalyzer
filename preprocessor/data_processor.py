@@ -1,4 +1,4 @@
-def split(data, labels, test_size=0.5, random_state=95, shuffle=False):
+def split(data, labels, test_size=0.5, random_state=95, shuffle=True):
     """
     splits the data using a certain ratio
     :param data: a list representing the data set
