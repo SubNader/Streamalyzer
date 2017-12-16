@@ -1,9 +1,11 @@
 def split(data, labels, test_size=0.5, random_state=95, shuffle=False):
     """
-    split the data using a certain ratio
+    splits the data using a certain ratio
     :param data: a list representing the data set
     :param test_size: the test set size (range 0.0:1.0)
-    :return: training set/labels and test set/labels.
+    :param random_state: RandomState instance
+    :param shuffle: whether the data should be shuffled or not
+    :return: training set, training labels, test set and test labels.
     """
     from sklearn.model_selection import train_test_split
     return train_test_split(data, labels, test_size=test_size, random_state=random_state, shuffle=shuffle)
