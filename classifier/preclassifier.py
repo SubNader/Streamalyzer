@@ -1,8 +1,15 @@
 from preprocessor import data_reader, data_processor
 
 
-def fetch_data(emotion, data_pool='train'):
-    tweets_labels_tuple = list(data_reader.read_tweets(data_reader.get_path(emotion, data_pool)))
-    tweets = [i[0] for i in tweets_labels_tuple]
-    labels = [i[1] for i in tweets_labels_tuple]
-    return data_processor.split(data_processor.vectorize(data_processor.clean(tweets), 'count'), labels)
+def fetch_data(emotion):
+    train_tweets_tuple = list(data_reader.read_tweets(data_reader.get_path(emotion, 'train')))
+    test_tweets_tuple = list(data_reader.read_tweets(data_reader.get_path(emotion, 'dev')))
+    train_tweets = [i[0] for i in train_tweets_tuple]
+    train_labels = [i[1] for i in train_tweets_tuple]
+    test_tweets = [i[0] for i in test_tweets_tuple]
+    test_labels = [i[1] for i in test_tweets_tuple]
+    train_tweets_length = len(train_tweets)
+    all_tweets_vector = data_processor.vectorize(data_processor.clean(train_tweets + test_tweets), 'count')
+    train_tweets = all_tweets_vector[:train_tweets_length]
+    test_tweets = all_tweets_vector[train_tweets_length:]
+    return train_tweets, test_tweets, train_labels, test_labels
