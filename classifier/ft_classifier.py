@@ -54,7 +54,6 @@ class Classifier:
             return
 
 if __name__ == '__main__':
-
     emotions = ['joy', 'fear', 'anger', 'sadness']
     classifier = Classifier()
     from classifier.preclassifier import fetch_data
