@@ -1,6 +1,6 @@
 from classifier import adaboost, KNN, MLP, random_forest, naive_bayes
 
-if __name__ == '__main__':
+def run():
     emotions = ['joy', 'fear', 'anger', 'sadness']
     for e in emotions:
         print('Printing accuracies for:', e)
@@ -10,3 +10,4 @@ if __name__ == '__main__':
         random_forest.run(e)
         naive_bayes.run(e)
         print('-----------------------------\n')
+run()

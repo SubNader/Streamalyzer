@@ -10,10 +10,8 @@ def get_path(emotion, data_pool='train'):
     :return: file path for data
     """
     from glob import glob
-
     result = glob('../{}_dataset/*-{}-{}.txt'.format(data_pool, emotion, data_pool))
 
-    assert len(result) == 1
     return result[0]
 
 
