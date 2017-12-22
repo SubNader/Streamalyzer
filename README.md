@@ -1,2 +1,2 @@
 # Streamalyzer
-Twitter stream analyzer
+Tweets sentiment intensity analyzer
