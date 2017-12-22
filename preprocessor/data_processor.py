@@ -122,10 +122,9 @@ def vectorize(tweets, method):
     if method == 'count':
         from sklearn.feature_extraction.text import CountVectorizer
         return CountVectorizer().fit_transform(tweets)
-    elif method == 'ft_supervised':
-        f
-    elif method == 'ft_unsupervised':
-
+    elif method == 'tfidf':
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        return TfidfVectorizer().fit_transform(tweets)
     else:
         raise ValueError(method + ' is not available')
         ## TODO(1): add other vectorizers

@@ -10,7 +10,7 @@ def fetch_data(emotion, vectorize = True):
     test_labels = [i[1] for i in test_tweets_tuple]
     if vectorize:
         train_tweets_length = len(train_tweets)
-        all_tweets_vector = data_processor.vectorize(data_processor.clean(train_tweets + test_tweets), 'count')
+        all_tweets_vector = data_processor.vectorize(data_processor.clean(train_tweets + test_tweets), 'tfidf')
         train_tweets = all_tweets_vector[:train_tweets_length]
         test_tweets = all_tweets_vector[train_tweets_length:]
     else:

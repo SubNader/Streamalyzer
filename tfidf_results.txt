@@ -1,0 +1,91 @@
+Printing accuracies for: joy
+AdaBoost Accuracy (learning rate  0.1 ): 0.279310344828
+AdaBoost Accuracy (learning rate  0.25 ): 0.241379310345
+AdaBoost Accuracy (learning rate  0.5 ): 0.268965517241
+AdaBoost Accuracy (learning rate  1 ): 0.28275862069
+AdaBoost Accuracy (learning rate  1.1 ): 0.279310344828
+AdaBoost Accuracy (learning rate  1.25 ): 0.268965517241
+AdaBoost Accuracy (learning rate  1.5 ): 0.279310344828
+KNN Accuracy (n_neighbors  3 ): 0.237931034483
+KNN Accuracy (n_neighbors  5 ): 0.268965517241
+KNN Accuracy (n_neighbors  7 ): 0.286206896552
+KNN Accuracy (n_neighbors  8 ): 0.275862068966
+KNN Accuracy (n_neighbors  10 ): 0.289655172414
+KNN Accuracy (n_neighbors  12 ): 0.306896551724
+KNN Accuracy (n_neighbors  15 ): 0.286206896552
+MLP Accuracy (alpha  0.0001 ): 0.365517241379
+MLP Accuracy (alpha  0.001 ): 0.348275862069
+MLP Accuracy (alpha  0.01 ): 0.327586206897
+MLP Accuracy (alpha  0.1 ): 0.313793103448
+Random Forest Accuracy: 0.289655172414
+Naive Bayes Accuracy: 0.337931034483
+-----------------------------
+
+Printing accuracies for: fear
+AdaBoost Accuracy (learning rate  0.1 ): 0.650385604113
+AdaBoost Accuracy (learning rate  0.25 ): 0.647814910026
+AdaBoost Accuracy (learning rate  0.5 ): 0.652956298201
+AdaBoost Accuracy (learning rate  1 ): 0.658097686375
+AdaBoost Accuracy (learning rate  1.1 ): 0.650385604113
+AdaBoost Accuracy (learning rate  1.25 ): 0.655526992288
+AdaBoost Accuracy (learning rate  1.5 ): 0.647814910026
+KNN Accuracy (n_neighbors  3 ): 0.601542416452
+KNN Accuracy (n_neighbors  5 ): 0.629820051414
+KNN Accuracy (n_neighbors  7 ): 0.629820051414
+KNN Accuracy (n_neighbors  8 ): 0.640102827763
+KNN Accuracy (n_neighbors  10 ): 0.652956298201
+KNN Accuracy (n_neighbors  12 ): 0.645244215938
+KNN Accuracy (n_neighbors  15 ): 0.655526992288
+MLP Accuracy (alpha  0.0001 ): 0.634961439589
+MLP Accuracy (alpha  0.001 ): 0.642673521851
+MLP Accuracy (alpha  0.01 ): 0.650385604113
+MLP Accuracy (alpha  0.1 ): 0.647814910026
+Random Forest Accuracy: 0.645244215938
+Naive Bayes Accuracy: 0.526992287918
+-----------------------------
+
+Printing accuracies for: anger
+AdaBoost Accuracy (learning rate  0.1 ): 0.286082474227
+AdaBoost Accuracy (learning rate  0.25 ): 0.298969072165
+AdaBoost Accuracy (learning rate  0.5 ): 0.29381443299
+AdaBoost Accuracy (learning rate  1 ): 0.298969072165
+AdaBoost Accuracy (learning rate  1.1 ): 0.30412371134
+AdaBoost Accuracy (learning rate  1.25 ): 0.30412371134
+AdaBoost Accuracy (learning rate  1.5 ): 0.324742268041
+KNN Accuracy (n_neighbors  3 ): 0.34793814433
+KNN Accuracy (n_neighbors  5 ): 0.378865979381
+KNN Accuracy (n_neighbors  7 ): 0.360824742268
+KNN Accuracy (n_neighbors  8 ): 0.363402061856
+KNN Accuracy (n_neighbors  10 ): 0.386597938144
+KNN Accuracy (n_neighbors  12 ): 0.394329896907
+KNN Accuracy (n_neighbors  15 ): 0.39175257732
+MLP Accuracy (alpha  0.0001 ): 0.355670103093
+MLP Accuracy (alpha  0.001 ): 0.34793814433
+MLP Accuracy (alpha  0.01 ): 0.35824742268
+MLP Accuracy (alpha  0.1 ): 0.360824742268
+Random Forest Accuracy: 0.340206185567
+Naive Bayes Accuracy: 0.280927835052
+-----------------------------
+
+Printing accuracies for: sadness
+AdaBoost Accuracy (learning rate  0.1 ): 0.471032745592
+AdaBoost Accuracy (learning rate  0.25 ): 0.465994962217
+AdaBoost Accuracy (learning rate  0.5 ): 0.465994962217
+AdaBoost Accuracy (learning rate  1 ): 0.455919395466
+AdaBoost Accuracy (learning rate  1.1 ): 0.453400503778
+AdaBoost Accuracy (learning rate  1.25 ): 0.453400503778
+AdaBoost Accuracy (learning rate  1.5 ): 0.445843828715
+KNN Accuracy (n_neighbors  3 ): 0.377833753149
+KNN Accuracy (n_neighbors  5 ): 0.380352644836
+KNN Accuracy (n_neighbors  7 ): 0.362720403023
+KNN Accuracy (n_neighbors  8 ): 0.377833753149
+KNN Accuracy (n_neighbors  10 ): 0.385390428212
+KNN Accuracy (n_neighbors  12 ): 0.372795969773
+KNN Accuracy (n_neighbors  15 ): 0.392947103275
+MLP Accuracy (alpha  0.0001 ): 0.370277078086
+MLP Accuracy (alpha  0.001 ): 0.370277078086
+MLP Accuracy (alpha  0.01 ): 0.425692695214
+MLP Accuracy (alpha  0.1 ): 0.450881612091
+Random Forest Accuracy: 0.478589420655
+Naive Bayes Accuracy: 0.287153652393
+-----------------------------

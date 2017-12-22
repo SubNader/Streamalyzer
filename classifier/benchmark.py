@@ -18,9 +18,10 @@ if __name__ == '__main__':
         MLP.run(e)
     plt.legend()
     plt.show()
+    plt.title('Random Forest estimators vs Accuracies')
     for e in emotions:
         random_forest.run(e)
-    # plt.show()
+    plt.legend()
+    plt.show()
     for e in emotions:
         naive_bayes.run(e)
-        # plt.show()
